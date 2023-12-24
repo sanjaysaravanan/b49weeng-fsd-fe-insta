@@ -1,19 +1,53 @@
 // Register.js
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import styles from "./register.module.css";
 import { Link } from "react-router-dom";
+import { registerUser } from "../../crud";
+import AppContext from "../../AppContext";
 
 const Register = () => {
+  const { displayMsg, setDisplayMsg } = useContext(AppContext);
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [bio, setBio] = useState("");
   const [profilePic, setProfilePic] = useState("");
+  const [password, setPassword] = useState("");
 
-  const handleRegister = () => {
+  const handleRegister = async () => {
     // Here you can add your registration logic
-    console.log("Registering with:", { email, name, phone, bio, profilePic });
+    try {
+      setDisplayMsg({
+        ...displayMsg,
+        loader: true,
+      });
+      const response = await registerUser({
+        email,
+        username: name,
+        phone,
+        bio,
+        profilePic,
+        password,
+      });
+      setDisplayMsg({
+        type: "success",
+        msg: response.msg || "",
+        show: true,
+        loader: false,
+      });
+    } catch (err) {
+      console.log(err);
+      const {
+        response: { data = {} },
+      } = err;
+      setDisplayMsg({
+        type: "error",
+        msg: data.msg || "",
+        show: true,
+        loader: false,
+      });
+    }
   };
 
   return (
@@ -62,6 +96,15 @@ const Register = () => {
             id="profilePic"
             value={profilePic}
             onChange={(e) => setProfilePic(e.target.value)}
+          />
+        </div>
+        <div className={styles["input-container"]}>
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </div>
         <button onClick={handleRegister}>Register</button>

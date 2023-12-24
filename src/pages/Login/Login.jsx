@@ -1,17 +1,56 @@
 // Login.js
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import styles from "./login.module.css";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
+import { loginUser } from "../../crud";
+import AppContext from "../../AppContext";
 
 const Login = () => {
+  const isAuthenticated = JSON.parse(localStorage.getItem("isAuthenticated"));
+
+  const { displayMsg, setDisplayMsg } = useContext(AppContext);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
-  const handleLogin = () => {
+  const [directToHome, setToHome] = useState(false);
+  const handleLogin = async () => {
     // Here you can add your authentication logic
-    console.log("Logging in with:", { username, password });
+    try {
+      setDisplayMsg({
+        ...displayMsg,
+        loader: true,
+      });
+      const response = await loginUser({
+        email: username,
+        password,
+      });
+
+      localStorage.setItem("isAuthenticated", true);
+      setToHome(true);
+
+      setDisplayMsg({
+        type: "success",
+        msg: response.msg || "",
+        show: true,
+        loader: false,
+      });
+    } catch (err) {
+      console.log(err);
+      const {
+        response: { data = {} },
+      } = err;
+      setDisplayMsg({
+        type: "error",
+        msg: data.msg || "",
+        show: true,
+        loader: false,
+      });
+    }
   };
+
+  if (isAuthenticated || directToHome) {
+    return <Navigate to="/" />;
+  }
 
   return (
     <div className={styles.root}>

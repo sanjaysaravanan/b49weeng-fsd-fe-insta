@@ -1,0 +1,41 @@
+/* src/components/Sidebar.module.css */
+.sidebarContainer {
+  width: 100%;
+  background-color: #f0f0f0;
+}
+
+.searchContainer {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.userList {
+  display: flex;
+  flex-direction: column;
+}
+
+.userItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border: 1px solid;
+  cursor: pointer;
+  padding: 0 8px;
+  border-radius: 4px;
+}
+
+.userItem:hover {
+  background-color: #ccc;
+}
+
+img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "username": "john_doe",
+    "caption": "Exploring the great outdoors!",
+    "imageUrl": "https://media.istockphoto.com/id/1472130130/photo/bright-various-color-as-palette-closeup.webp?b=1&s=170667a&w=0&k=20&c=xcSbQhisGHl2E7DemCpjGAJXKcuJZkqZrKycfloz9Wk=",
+    "likes": 56
+  },
+  {
+    "id": 2,
+    "username": "jane_smith",
+    "caption": "Sunset views from the mountaintop.",
+    "imageUrl": "https://images.unsplash.com/photo-1579353977828-2a4eab540b9a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2FtcGxlfGVufDB8fDB8fHww",
+    "likes": 78
+  },
+  {
+    "id": 3,
+    "username": "sam_jones",
+    "caption": "Coffee and code kind of day.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5431XWfygoc3_VauuEX5VBVkuBv_X3NkT2EZpL34hKQ&s",
+    "likes": 34
+  },
+  {
+    "id": 4,
+    "username": "emily_parks",
+    "caption": "Chasing dreams in the city lights.",
+    "imageUrl": "https://media.istockphoto.com/id/1300036735/photo/blood-test-results-in-a-medical-lab.jpg?s=612x612&w=0&k=20&c=FcEXVAP1EgimwH-gLQ37zRMen7AALY4G5kx7q1xz3rA=",
+    "likes": 102
+  }
+]

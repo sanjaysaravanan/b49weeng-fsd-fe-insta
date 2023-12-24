@@ -1,0 +1,38 @@
+/* src/components/MyPosts.module.css */
+.myPostsContainer {
+  width: 400px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.postList {
+  list-style: none;
+  padding: 0;
+}
+
+.postItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+button {
+  background-color: #ff6347;
+  color: #fff;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #c0392b;
+}

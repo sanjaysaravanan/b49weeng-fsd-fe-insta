@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "email": "john.doe@example.com",
+    "phone": "123-456-7890",
+    "bio": "Software Developer",
+    "profilePic": "https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+  },
+  {
+    "id": 2,
+    "email": "jane.smith@example.com",
+    "phone": "987-654-3210",
+    "bio": "Web Designer",
+    "profilePic": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww"
+  },
+  {
+    "id": 3,
+    "email": "sam.jones@example.com",
+    "phone": "555-123-4567",
+    "bio": "Data Scientist",
+    "profilePic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqdczPRwvAWqy5nS7SbEIXTUglogOG0TJghl_UX2n-TQ&s"
+  },
+  {
+    "id": 4,
+    "email": "emma.wilson@example.com",
+    "phone": "111-222-3333",
+    "bio": "UX/UI Designer",
+    "profilePic": "https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+  }
+]

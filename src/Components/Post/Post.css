@@ -1,0 +1,35 @@
+/* src/components/Post.css */
+.post-container {
+  border: 1px solid #ddd;
+  margin: auto;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.post-header {
+  background-color: #f0f0f0;
+  padding: 5px;
+}
+
+.post-username {
+  margin: 0;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.post-footer {
+  margin-top: 10px;
+}
+
+.post-caption {
+  margin: 0;
+}
+
+.post-likes {
+  margin: 5px 0;
+}

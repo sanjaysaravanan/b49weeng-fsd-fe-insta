@@ -1,0 +1,28 @@
+/* src/App.css */
+.app-container {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  position: fixed;
+  height: 100vh;
+  top: 0px;
+}
+
+.left-sidebar {
+  left: 0px;
+}
+
+.main-content {
+  margin: 0 240px;
+  padding: 20px;
+  text-align: center;
+  width: calc(100vw - 480px);
+}
+
+.right-sidebar {
+  right: 0px;
+}

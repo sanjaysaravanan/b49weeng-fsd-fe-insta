@@ -1,0 +1,26 @@
+/* src/components/UserList.module.css */
+.userListContainer {
+  width: 400px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.userList {
+  list-style: none;
+  padding: 0;
+}
+
+.userItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
